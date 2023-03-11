@@ -74,11 +74,11 @@ def write_to_csv(file, data):
         for nrow in data:
             f_n_writer.writerow(nrow)
 
-if __name__ == "__main__":
-    res = get_data(['info_1.txt', 'info_2.txt', 'info_3.txt'])
-    write_to_csv('data_report.csv', res)
 
-    with open('data_report.csv') as f_n:
-        print(f_n.read())
+res = get_data(['info_1.txt', 'info_2.txt', 'info_3.txt'])
+write_to_csv('data_report.csv', res)
+
+with open('data_report.csv') as f_n:
+    print(f_n.read())
 
 

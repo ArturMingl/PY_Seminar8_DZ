@@ -19,25 +19,30 @@ ASCII(например, €);
 совпадают ли они с исходными.
 """
 
+import yaml
+
+first_key = [
+    'switchport trunk encapsulation dot1q',
+    'switchport mode trunk',
+    'switchport trunk native vlan 999',
+    'switchport trunk allowed vlan'
+]
+
+second_key = 100
+third_key = {
+    'first_value':  str(100) + u'\u20AC',
+    'second_value': str(200) + u'\u20AC',
+    'third_value': str(300) + u'\u20AC',
+}
+
+to_yaml = {'first_key': first_key, 'second_key': second_key, 'third_key': third_key}
+
+with open('file.yaml', 'w', encoding='utf-16') as t_f:
+    yaml.dump(to_yaml, t_f, allow_unicode=True, default_flow_style=False, default_style='"')
+
+with open('file.yaml', 'r', encoding='utf-16') as file_read:
+    print(yaml.safe_load(file_read) == to_yaml)
 
 
 
 
-
-
-
-
-
-
-
-
-import socket
-
-obj_sock = socket.socket()
-
-# bytes ->
-obj_sock.sendto(var, ())
-
-#close
-
-клиент 1) 2)

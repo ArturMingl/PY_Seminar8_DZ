@@ -1,3 +1,23 @@
 {
-    "orders": []
+    "item": [
+        "toys",
+        "books",
+        "dishes"
+    ],
+    "quantity": [
+        5,
+        4,
+        10
+    ],
+    "price": [
+        100.0,
+        10.0,
+        50.5
+    ],
+    "buyer": [
+        "Vasily Ivanovich"
+    ],
+    "date": [
+        "10.10.10"
+    ]
 }
